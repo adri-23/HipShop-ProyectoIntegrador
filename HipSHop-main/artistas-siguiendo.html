@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/header.style.css">
+    <link rel="stylesheet" href="assets/css/container.style.css">
+    <link rel="stylesheet" href="assets/css/perfil.css">
+    <link rel="stylesheet" href="assets/css/artistas-siguiendo.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Navbar brand--><a href="index.html" class="navbar-brand font-weight-bold">
+                    <h1 class="title-header"><a href="index.html" class="title-header">Hip-SHop</a></h1>
+                </a>
+                <!-- Navbar toggler button-->
+                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler navbar-toggler-right">Menu<i class="icon ion-md-list ml-2"></i></button>
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav mx-auto ml-auto">
+                        <!-- Link-->
+                        <li class="nav-item"> <a href="rap-freestyle.html" class="nav-link">Rap & Freestyle</a></li>
+                        <!-- Link-->
+                        <li class="nav-item"> <a href="breaking.html" class="nav-link">Breaking</a></li>
+                        <!-- Link-->
+                        <li class="nav-item"> <a href="djs-beatmakers.html" class="nav-link">DJs & Beatmakers</a></li>
+
+                        <li class="nav-item"> <a href="graffiti.html" class="nav-link">Graffiti</a></li>
+                        <!-- <li class="nav-item"> <a href="#" class="nav-link">Mujeres</a></li>
+                <li class="nav-item"> <a href="#" class="nav-link">Hombres</a></li> -->
+
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item" id="loginButton"><a href="#" data-bs-toggle="modal" data-bs-target="#modalForm" class="nav-link font-weight-bold mr-3">Iniciar</a></li>
+                        <li class="nav-item" id="signupButton"><a href="#" data-bs-toggle="modal"  data-bs-target="#modalSignup" class="navbar-btn btn btn-primary">Registrarse</a></li>
+                        <li class="nav-item" id="nameButton"><a href="perfil.html"  class="nav-link font-weight-bold mr-3" style="font-family: 'SedgwickAveDisplay';font-size: 1.5rem;">Ernesto</a></li>
+                        <li class="nav-item" id="cartIcon" ><a href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="50" style="cursor: pointer;margin-left:20px;" height="50" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg></a></li>
+                      </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Modal container Login-->
+  <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Iniciar sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="aka" placeholder="Correo electronico">
+            <label for="aka">A.K.A.</label>
+          </div>
+          <br>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="password" placeholder="Contraseña">
+            <label for="password">Contraseña</label>
+          </div>
+          <br>
+          <div class="modal-footer d-block">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+            <button type="button" id="login" style="float: right;" class="btn btn-success">Iniciar sesión</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalSignup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Regístrate</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="usernameRegister" placeholder="Correo electronico">
+            <label for="correoElectronico">A.K.A.</label>
+          </div>
+          <br>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="passwordRegister" placeholder="Contraseña">
+            <label for="password">Contraseña</label>
+          </div>
+          <br>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="passwordRegisterConfirm" placeholder="Repite tu contraseña">
+            <label for="password">Repite tu contraseña</label>
+          </div>
+          <br>
+          <div class="modal-footer d-block">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+            <button type="button" style="float: right;" id="registerButton" class="btn btn-success">Registrarse</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="container div-contenedor" style="padding-bottom: 15px; ">
+        <div class="row align-items-start" style="width:300px;">
+            <div class="" style="width:300px;">
+                <div class="card" style="width: 15rem; margin-top: 45px ">
+                    <div class="card-header bg-dark">
+                        <h6 class="card-title text-white m-1">Mi cuenta</h6>
+                    </div>
+                    <ul class="list-group list-group-flush bg-white">
+                        <li class="list-group"><a href="perfil-usuario.html" class="nav-link">Perfil</a></li>
+                        <li class="list-group"><a href="direcciones.html" class="nav-link">Direcciones</a></li>
+                        <li class="list-group"><a href="#" class="nav-link">Pedidos</a></li>
+                        <li class="list-group"><a href="metodos-pago.html" class="nav-link">Método de pago</a></li>
+                        <li class="list-group"><a href="deseos.html" class="nav-link">Listas de deseos</a></li>
+                        <li class="list-group"><a href="artistas-siguiendo.html" class="nav-link">Artistas que sigo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="slider contenedor" style="width: 800px">
+
+            <div class="contenedor-titulo-controles">
+                <h2 style = "font-family: 'SedgwickAveDisplay'">Artistas que sigo</h2>
+
+                <div class="indicadores">
+
+                </div>
+            </div>
+
+            <div class="contenedor-principal">
+                <button role="buton" class="flecha-izquierda" id="flecha-izquierda"><img
+                        src="assets/images/flecha-atras.png"></img></button>
+
+
+                <!-- Agregamos el carrusel -->
+                <div class="contenedor-carrusel">
+                    <div class="carrusel">
+
+                        <div class="artista">
+                            <a href="#"><img src="/assets/images/aczino.jpg" style="width:270px; height:300px"></a>
+                            <div class = "button" style="padding-top: 5px; margin-left: 30px;">
+                                <h4 style = "margin-right: 45px">ACZINO</h4>
+                                <button class="btn btn-primary" style = "margin-right: 41px">Dejar de seguir</button>
+                            </div>
+                        </div>
+                   
+
+                    <div class="artista">
+                        <a href="#"><img src="/assets/images/LaurynHill.jpg" style="width:270px; height:300px"></a>
+                        <div class = "button" style="padding-top: 5px;margin-left: 30px;">
+                            <h4  style = "margin-right: 45px">LAURY HILL</h4>
+                            <button class="btn btn-primary">Dejar de seguir</button>
+                        </div>
+                    </div>
+
+                    <div class="artista">
+
+                        <a href="#"><img src="/assets/images/eve.jpg" style="width:270px; height:300px" alt="" /></a>
+                        <div class = "button" style="padding-top: 5px; margin-left: 30px;">
+
+                            <h4>ACZINO</h4>
+                            <button class="btn btn-primary">Dejar de seguir</button>
+                        </div>
+                    </div>
+
+                    <div class="artista">
+
+                        <a href="#"><img src="/assets/images/missy.jpg" style="width:270px; height:300px" alt="" /></a>
+                        <div class = "button" style="padding-top: 5px;margin-left: 30px;">
+        
+                            <h4>ACZINO</h4>
+                            <button class="btn btn-primary">Dejar de seguir</button>
+                        </div>
+                    </div>
+
+                    <div class="artista">
+
+                        <a href="#"><img src="/assets/images/ximbo.jpg" style="width:270px; height:300px" alt="" /></a>
+                        <div class = "button" style="padding-top: 5px;margin-left: 30px;">
+
+                            <h4>ACZINO</h4>
+                            <button class="btn btn-primary">Dejar de seguir</button>
+                        </div>
+                    </div>
+
+                    <div class="artista">
+
+                        <a href="#"><img src="/assets/images/Audry.jpg" style="width:270px; height:300px" alt="" /></a>
+                        <div class = "button" style="padding-top: 5px;margin-left: 30px;">
+
+                            <h4>ACZINO</h4>
+
+                            <button class="btn btn-primary">Dejar de seguir</button>
+                        </div>
+                    </div>
+
+                    <div class="artista">
+
+                        <a href="#"><img src="/assets/images/Kaze.jpg" style="width:270px; height:300px" alt="" /></a>
+                        <div class = "button" style="padding-top: 5px;margin-left: 30px;">
+                        <!-- <div style="padding-top: 5px;margin-left: 60px;"> -->
+                            <h4  style = "margin-right: 45px">KAZE</h4>
+                            <button class="btn btn-primary">Dejar de seguir</button>
+                        </div>
+                    </div>
+
+                    <div class="artista">
+                        <a href="#"><img src="/assets/images/santa-fe.jpg" style="width:270px; height:300px"></a>
+                        <div  class = "button" style="padding-top: 5px;margin-left: 30px;">
+                            <h4  style = "margin-right: 45px">SANTA-FE</h4>
+                            <button class="btn btn-primary">Dejar de seguir</button>
+                        </div>
+                    </div>
+
+                    <div class="artista">
+                        <a href="#"><img src="/assets/images/c-kan.jpg" style="width:270px; height:300px"
+                                alt="" /></a>
+                        <div  class = "button" style="padding-top: 5px;margin-left: 30px;">
+                            <h4  style = "margin-right: 45px">C-KAN</h4>
+                            <button class="btn btn-primary">Dejar de seguir</button>
+                        </div>
+                    </div>
+
+                    <div class="artista">
+                        <a href="#"><img src="/assets/images/charles-ans.jpg" style="width:270px; height:300px"
+                                alt="" /></a>
+                        <div  class = "button" style="padding-top: 5px;margin-left: 30px;">
+                            <h4  style = "margin-right: 45px">CHARLES ANS</h4>
+                            <button class="btn btn-primary">Dejar de seguir</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            
+            
+            <button role="buton" class="flecha-derecha" id="flecha-derecha"><img
+                src="assets/images/flecha-adelante.png"></img></button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    </div>
+
+
+    <!--Footer-->
+    <div class="piedepag">
+        <br>
+        <br>
+        <p class="mpie">Categorías</p>
+        <button type="button" class="btn btn-light mpie me-1">Rap & Freestyle</button>
+        <button type="button" class="btn btn-light me-1">Break Dance</button>
+        <button type="button" class="btn btn-light me-1">Dj's & Beatmakers</button>
+        <button type="button" class="btn btn-light me-1">Graffiti</button>
+        <p class="mpie mt-3">Artistas Destacados</p>
+        <button type="button" class="btn btn-light mpie me-1">Masta Quba</button>
+        <button type="button" class="btn btn-light me-1">Pat Boy</button>
+        <button type="button" class="btn btn-light me-1">Skafo LaFaro</button>
+        <button type="button" class="btn btn-light me-1">Olmeca</button>
+        <p class="mpie mt-3">Artículos</p>
+        <button type="button" class="btn btn-light mpie me-1">Hoodies</button>
+        <button type="button" class="btn btn-light me-1">Playeras</button>
+        <button type="button" class="btn btn-light me-1">Tennis</button>
+        <button type="button" class="btn btn-light me-1">Arte</button>
+        <button type="button" class="btn btn-light me-1">Stickers</button>
+        <p class="newslet fuentenew mt-3">Newsletter</p>
+        <p class="newslet">SUSCRÍBETE A NUESTRO NEWSLETTER Y RECIBE NUESTRAS PROMOCIONES DIRECTAMENTE EN TU CORREO</p>
+        <div class="input-group mt-3 cartas" style="width: 50%; margin:0 auto">
+            <input type="text" class="form-control" placeholder="Recipient's username"
+                aria-label="Recipient's username with two button addons">
+            <button class="btn btn-outline-light" type="button" style="width: 92px;">Hombre</button>
+            <button class="btn btn-outline-light" type="button" style="width: 92px;"> Mujer</button>
+            <button class="btn btn-outline-light" type="button">Suscríbete</button>
+        </div>
+        <br>
+        <br>
+        <img src="assets/images/fotter1.jpg" alt="" style="width: 99%;">
+
+    </div>
+
+
+    <script src="./assets/js/artistas-seguidos.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="./assets/js/bootstrap.bundle.js"></script>
+    <script src="./assets/js/jquery.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./assets/js/register.js"></script>
+    
+</body>
+
+</html>

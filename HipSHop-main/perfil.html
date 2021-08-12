@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/header.style.css">
+    <link rel="stylesheet" href="./assets/css/container.style.css">
+    <link rel="stylesheet" href="./assets/css/perfil.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Navbar brand--><a href="index.html" class="navbar-brand font-weight-bold">
+                    <h1 class="title-header"><a href="index.html" class="title-header">Hip-SHop</a></h1>
+                </a>
+                <!-- Navbar toggler button-->
+                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler navbar-toggler-right">Menu<i class="icon ion-md-list ml-2"></i></button>
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav mx-auto ml-auto">
+                        <!-- Link-->
+                        <li class="nav-item"> <a href="rap-freestyle.html" class="nav-link">Rap & Freestyle</a></li>
+                        <!-- Link-->
+                        <li class="nav-item"> <a href="breaking.html" class="nav-link">Breaking</a></li>
+                        <!-- Link-->
+                        <li class="nav-item"> <a href="djs-beatmakers.html" class="nav-link">DJs & Beatmakers</a></li>
+
+                        <li class="nav-item"> <a href="graffiti.html" class="nav-link">Graffiti</a></li>
+                        <!-- <li class="nav-item"> <a href="#" class="nav-link">Mujeres</a></li>
+                <li class="nav-item"> <a href="#" class="nav-link">Hombres</a></li> -->
+
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item" id="loginButton"><a href="#" data-bs-toggle="modal" data-bs-target="#modalForm" class="nav-link font-weight-bold mr-3">Iniciar</a></li>
+                        <li class="nav-item" id="signupButton"><a href="#" data-bs-toggle="modal"  data-bs-target="#modalSignup" class="navbar-btn btn btn-primary">Registrarse</a></li>
+                        <li class="nav-item" id="nameButton"><a href="perfil.html"  class="nav-link font-weight-bold mr-3" style="font-family: 'SedgwickAveDisplay';font-size: 1.5rem;">Ernesto</a></li>
+                        <li class="nav-item" id="cartIcon" ><a href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="50" style="cursor: pointer;margin-left:20px;" height="50" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg></a></li>
+                      </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+     <!-- Modal container Login-->
+  <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Iniciar sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="aka" placeholder="Correo electronico">
+            <label for="aka">A.K.A.</label>
+          </div>
+          <br>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="password" placeholder="Contraseña">
+            <label for="password">Contraseña</label>
+          </div>
+          <br>
+          <div class="modal-footer d-block">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+            <button type="button" id="login" style="float: right;" class="btn btn-success">Iniciar sesión</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalSignup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Regístrate</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="usernameRegister" placeholder="Correo electronico">
+            <label for="correoElectronico">A.K.A.</label>
+          </div>
+          <br>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="passwordRegister" placeholder="Contraseña">
+            <label for="password">Contraseña</label>
+          </div>
+          <br>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="passwordRegisterConfirm" placeholder="Repite tu contraseña">
+            <label for="password">Repite tu contraseña</label>
+          </div>
+          <br>
+          <div class="modal-footer d-block">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+            <button type="button" style="float: right;" id="registerButton" class="btn btn-success">Registrarse</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="container">
+        <div class="row align-items-start">
+            <div class="col">
+                <div class="card" style="width: 15rem; ">
+                    <div class="card-header bg-dark">
+                        <h6 class="card-title text-white m-1">Mi cuenta</h6>
+                    </div>
+                    <ul class="list-group list-group-flush bg-white">
+                        <li class="list-group"><a href="perfil-usuario.html" class="nav-link">Perfil</a></li>
+                        <li class="list-group"><a href="direcciones.html" class="nav-link">Direcciones</a></li>
+                        <li class="list-group"><a href="#" class="nav-link">Pedidos</a></li>
+                        <li class="list-group"><a href="metodos-pago.html" class="nav-link">Método de pago</a></li>
+                        <li class="list-group"><a href="deseos.html" class="nav-link">Listas de deseos</a></li>
+                        <li class="list-group"><a href="artistas-siguiendo.html" class="nav-link">Artistas que sigo</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <div class="container"></div>
+                <div class="col-lg-7">
+                    <div class="banner">
+                        <img src="./assets/imagenes/Screen-Shot-2020-07-23-at-10.09.21-PM.png" alt="comunidad"
+                            class="img1 img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Mis direcciones</h5>
+                        <p class="card-text">Guarda tus direcciones y compra más rápido</p>
+                        <a href="direcciones.html" class="btn btns btn-primary">Agregar direcciones</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Formas de pago</h5>
+                        <p class="card-text">Agregar formas de pago</p>
+                        <a href="#" class="btn btns btn-primary">Agregar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./assets/imagenes/dj-grid-uproxx.jpg" height="400rem" class="d-block w-100 img"
+                                alt="graffitis">
+                            <div class="carousel-caption modal-dialog-centered m-5">
+                                <h3>Beneficios al permanecer en esta comunidad</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Listas de deseos</h5>
+                        <p class="card-text">Información sobre productos de tu talla</p>
+                        <a href="#" class="btn btns btn-primary">Agregar direcciones</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Mis pedidos</h5>
+                        <p class="card-text">Compras realizadas y en proceso</p>
+                        <a href="#" class="btn btns btn-primary">Agregar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row row-cols-2 row-cols-md-5 g-4">
+            <div class="col">
+                <div class="card cards">
+                    <img src="./assets/imagenes/conjuntohombre.jpg" class="card-img-top" alt="conjunto/Hombres">
+                    <div class="card-body">
+                        <h6 class="card-title">Conjunto casual</h6>
+                        <h5 class="card-text">$500.00</h5>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card cards">
+                    <img src="./assets/imagenes/oberolmujer.jpg" class="card-img-top" alt="oberol/muejeres">
+                    <div class="card-body">
+                        <h6 class="card-title">Overol</h6>
+                        <h5 class="card-text">$450.00</h5>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card cards">
+                    <img src="./assets/imagenes/dudaderahombre.jpg" class="card-img-top" alt="Chamarra/hombres">
+                    <div class="card-body">
+                        <h6 class="card-title">Chamarra</h6>
+                        <h5 class="card-text">$300.00</h5>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card cards">
+                    <img src="./assets/imagenes/playera y gorromujer.jpg" class="card-img-top"
+                        alt="playera/gorro/Mujeres">
+                    <div class="card-body">
+                        <h6 class="card-title">Gorra-Playera</h6>
+                        <h5 class="card-text">$400.00</h5>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card cards">
+                    <img src="./assets/imagenes/playerahombre.jpg" class="card-img-top" alt="playera/hombre">
+                    <div class="card-body">
+                        <h6 class="card-title">Playera</h6>
+                        <h5 class="card-text">$200.00</h5>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    </form>
+    </div>
+    </div>
+
+    </div>
+    <!-- /Sidebar end-->
+    </div>
+    </div>
+    <!--Footer-->
+    <div class="piedepag">
+        <br>
+        <br>
+        <p class="mpie">Categorías</p>
+        <button type="button" class="btn btn-light mpie me-1">Rap & Freestyle</button>
+        <button type="button" class="btn btn-light me-1">Break Dance</button>
+        <button type="button" class="btn btn-light me-1">Dj's & Beatmakers</button>
+        <button type="button" class="btn btn-light me-1">Graffiti</button>
+        <p class="mpie mt-3">Artistas Destacados</p>
+        <button type="button" class="btn btn-light mpie me-1">Masta Quba</button>
+        <button type="button" class="btn btn-light me-1">Pat Boy</button>
+        <button type="button" class="btn btn-light me-1">Skafo LaFaro</button>
+        <button type="button" class="btn btn-light me-1">Olmeca</button>
+        <p class="mpie mt-3">Artículos</p>
+        <button type="button" class="btn btn-light mpie me-1">Hoodies</button>
+        <button type="button" class="btn btn-light me-1">Playeras</button>
+        <button type="button" class="btn btn-light me-1">Tennis</button>
+        <button type="button" class="btn btn-light me-1">Arte</button>
+        <button type="button" class="btn btn-light me-1">Stickers</button>
+        <p class="newslet fuentenew mt-3">Newsletter</p>
+        <p class="newslet">SUSCRÍBETE A NUESTRO NEWSLETTER Y RECIBE NUESTRAS PROMOCIONES DIRECTAMENTE EN TU CORREO</p>
+        <div class="input-group mt-3 cartas" style="width: 50%; margin:0 auto">
+            <input type="text" class="form-control" placeholder="Recipient's username"
+                aria-label="Recipient's username with two button addons">
+            <button class="btn btn-outline-light" type="button" style="width: 92px;">Hombre</button>
+            <button class="btn btn-outline-light" type="button" style="width: 92px;"> Mujer</button>
+            <button class="btn btn-outline-light" type="button">Suscríbete</button>
+        </div>
+        <br>
+        <br>
+        <img src="assets/images/fotter1.jpg" alt="" style="width: 99%;">
+
+    </div>
+
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="./assets/js/bootstrap.bundle.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./assets/js/register.js"></script>
+    
+</body>
+
+</html>

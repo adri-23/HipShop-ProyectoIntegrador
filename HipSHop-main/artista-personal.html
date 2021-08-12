@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artistas</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="./assets/css/header.style.css" />
+    <link rel="stylesheet" href="./assets/css/sidebar.style.css" />
+    <link rel="stylesheet" href="./assets/css/artista-personal.css"/>
+    <link rel="stylesheet" href="./assets/css/footer.css"/>
+
+</head>
+
+<header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Navbar brand--><a href="index.html" class="navbar-brand font-weight-bold">
+                    <h1 class="title-header">Hip-SHop</h1>
+                </a>
+                <!-- Navbar toggler button-->
+                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler navbar-toggler-right">Menu<i class="icon ion-md-list ml-2"></i></button>
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav mx-auto ml-auto">
+                        <!-- Link-->
+                        <li class="nav-item"> <a href="rap-freestyle.html" class="nav-link">Rap & Freestyle</a></li>
+                        <!-- Link-->
+                        <li class="nav-item"> <a href="breaking.html" class="nav-link">Breaking</a></li>
+                        <!-- Link-->
+                        <li class="nav-item"> <a href="djs-beatmakers.html" class="nav-link">DJs & Beatmakers</a></li>
+
+                        <li class="nav-item"> <a href="graffiti.html" class="nav-link">Graffiti</a></li>
+                        <!-- <li class="nav-item"> <a href="#" class="nav-link">Mujeres</a></li>
+                    <li class="nav-item"> <a href="#" class="nav-link">Hombres</a></li> -->
+
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item" id="loginButton"><a href="#" data-bs-toggle="modal" data-bs-target="#modalForm" class="nav-link font-weight-bold mr-3">Iniciar</a></li>
+                        <li class="nav-item" id="signupButton"><a href="#" data-bs-toggle="modal"  data-bs-target="#modalSignup" class="navbar-btn btn btn-primary">Registrarse</a></li>
+                        <li class="nav-item" id="nameButton"><a href="perfil.html"  class="nav-link font-weight-bold mr-3" style="font-family: 'SedgwickAveDisplay';font-size: 1.5rem;">Ernesto</a></li>
+                        <li class="nav-item" id="cartIcon" ><a href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="50" style="cursor: pointer;margin-left:20px;" height="50" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Modal container Login-->
+  <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Iniciar sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="aka" placeholder="Correo electronico">
+            <label for="aka">A.K.A.</label>
+          </div>
+          <br>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="password" placeholder="Contraseña">
+            <label for="password">Contraseña</label>
+          </div>
+          <br>
+          <div class="modal-footer d-block">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+            <button type="button" id="login" style="float: right;" class="btn btn-success">Iniciar sesión</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalSignup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Regístrate</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="usernameRegister" placeholder="Correo electronico">
+            <label for="correoElectronico">A.K.A.</label>
+          </div>
+          <br>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="passwordRegister" placeholder="Contraseña">
+            <label for="password">Contraseña</label>
+          </div>
+          <br>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="passwordRegisterConfirm" placeholder="Repite tu contraseña">
+            <label for="password">Repite tu contraseña</label>
+          </div>
+          <br>
+          <div class="modal-footer d-block">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+            <button type="button" style="float: right;" id="registerButton" class="btn btn-success">Registrarse</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <!--Comienza sidebar-->
+                <div class="sidebar col-xl-3 col-lg-4 pr-xl-5 order-lg-1">
+                    <div class="sidebar-block px-3 px-lg-0">
+                        <!-- Brand filter menu - this menu has .show class, so is expanded by default-->
+                        <div class="category-sidebar">
+                            <h5 class="title-sidebar">Artículos </h5>
+                            <ul class="sidebar-list">
+                                <li class="sidebar-list-item"><a href="#" class="sidebar-list-item-anchor">Hoodies</a></li>
+                                <li class="sidebar-list-item"><a href="#" class="sidebar-list-item-anchor">Playeras</a></li>
+                                <li class="sidebar-list-item"><a href="#" class="sidebar-list-item-anchor">Tenis</a></li>
+                                <li class="sidebar-list-item"><a href="#" class="sidebar-list-item-anchor">Arte</a></li>
+                                <li class="sidebar-list-item"><a href="#" class="sidebar-list-item-anchor">Stickers</a></li>
+                            </ul>
+                        </div>
+                        <hr class="custom-hr" />
+                        <div class="category-sidebar">
+                            <h5 class="title-sidebar">Servicios</h5>
+                            <ul class="sidebar-list">
+                                <li class="sidebar-list-item"><a href="#" class="sidebar-list-item-anchor">Beats</a>
+                                </li>
+                                <li class="sidebar-list-item"><a href="#" class="sidebar-list-item-anchor">Talleres</a>
+                                </li>
+                                <li class="sidebar-list-item"><a href="#" class="sidebar-list-item-anchor">DJs</a></li>
+                            </ul>
+                        </div>
+                        <hr class="custom-hr" />
+                        <div class="category-sidebar">
+                            <h5 class="title-sidebar">Artistas</h5>
+                            <ul class="sidebar-list">
+                                <li class="sidebar-list-item"><a href="#" class="sidebar-list-item-anchor">MastaQuba</a></li>
+                                <li class="sidebar-list-item"><a href="#" class="sidebar-list-item-anchor">PatBoy</a></li>
+                                <li class="sidebar-list-item"><a href="#" class="sidebar-list-item-anchor">SkafoLaFaro</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Termina sidebar-->
+
+        <!--Foto de la artista-->
+        <div class="col">
+        
+        <div class="row">
+                <!--Artista-->
+                <div class="foto-artista-personal" >
+                    <!--Botón de redes sociales-->
+                    <a href="https://www.facebook.com/mastaquba.ledesma" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill="#3b5998" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                </svg>
+                </a>
+                        <img src="assets/img/MastaQuba.jpg" class="img-fluid" alt="Foto de la rapera" style="width: 250px; height: 250px; border-radius: 50%;">
+
+                <!--Botón de redes sociales-->
+                        <a href="https://www.youtube.com/channel/UCT_pGv1vC2W9FxSF4d1ARYw" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" fill=" #c4302b" class="bi bi-youtube" viewBox="0 0 16 16">
+                            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+                        </svg>
+                        </a>
+                        <p class="nombre-artista-personal">Masta Quba</p>
+                        <button class="navbar-btn btn btn-primary">Seguir</button>
+                </div>
+                <!--Foto de producto-->
+                <div class="foto-producto-artista col-lg-4 col-md-6">
+                    <a href= "">
+                        <img src="assets/img/playera-MastaQuba1.jpg" class="img" alt="Foto de producto">
+                        <p class="nombre-artista-personal"><a href="item.html">Playera "Masta Quba"</a></p>
+                        <p> $180.00 </p>
+                        <button class="navbar-btn btn btn-primary">Comprar</button>
+                    </a>  
+                </div>
+                <!--Foto de producto2-->
+                <div class="foto-producto-artista col-lg-4 col-md-6">
+                    <a href= "">
+                        <img src="assets/img/Playera-SeChingona-MastaQuba.jpg" class="img" alt="Foto de producto">
+                        <p class="nombre-artista-personal">Playera "Sé Chingona"</p>
+                        <p> $230.00 </p>
+                        <button class="navbar-btn btn btn-primary">Comprar</button>
+                    </a>  
+                </div>
+
+                <div class="foto-producto-artista col-lg-4 col-md-6">
+                    <a href= "">
+                        <img src="assets/img/Workshop-MastaQuba.jpg" class="img" alt="Foto del producto">
+                        <p class="nombre-artista-personal">Workshop Rap para Morras</p>
+                        <p> $150.00 </p>
+                        <button class="navbar-btn btn btn-primary">Comprar</button>
+                    </a>  
+                </div>
+
+                <div class="foto-producto-artista col-lg-4 col-md-6">
+                    <a href= "">
+                        <img src="assets/img/Playera-Queens-MastaQuba.jpg" class="img" alt="Foto del producto">
+                        <p class="nombre-artista-personal">Playera "Queens"</p>
+                        <p> $230.00 </p>
+                        <button class="navbar-btn btn btn-primary">Comprar</button>
+                    </a>  
+                </div>
+
+                <div class="foto-producto-artista col-lg-4 col-md-6">
+                    <a href= "">
+                        <img src="assets/img/Playera-Mastauba2.jpg" class="img" alt="Foto del producto">
+                        <p class="nombre-artista-personal">Playera "Masta Quba"</p>
+                        <p> $180.00 </p>
+                        <button class="navbar-btn btn btn-primary">Comprar</button>
+                    </a>  
+                </div>
+
+                <div class="foto-producto-artista col-lg-4 col-md-6">
+                    <a href= "">
+                        <img src="assets/img/TallerRapquimia-MastaQuba.jpg" class="img" alt="Foto del producto">
+                        <p class="nombre-artista-personal">Taller Rapquimia</p>
+                        <p> $0.00</p>
+                        <button class="navbar-btn btn btn-primary">Comprar</button>
+                    </a>  
+                </div>
+
+                <div class="foto-producto-artista col-lg-4 col-md-6">
+                    <a href= "">
+                        <img src="assets/img/Sudadera-MastaQuba.jpg" class="img" alt="Foto del producto" >
+                        <p class="nombre-artista-personal"> Sudadera </p>
+                        <p> $570.00 </p>
+                        <button class="navbar-btn btn btn-primary">Comprar</button>
+                    </a>  
+                </div>
+
+                <div class="foto-producto-artista col-lg-4 col-md-6">
+                    <a href= "">
+                        <img src="assets/img/playera-MastaQuba1.jpg" class="img" alt="Foto del producto">
+                        <p class="nombre-artista-personal">Playera "Masta Quba"</p>
+                        <p> $230.00 </p>
+                        <button class="navbar-btn btn btn-primary">Comprar</button>
+                    </a>  
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!--Footer-->
+<div class="piedepag">
+    <br>
+    <br>
+    <p class="mpie">Categorias</p>
+    <button type="button" class="btn btn-light mpie me-1">Rap & Freestyle</button>
+    <button type="button" class="btn btn-light me-1">Break Dance</button>
+    <button type="button" class="btn btn-light me-1"><a href="djs-beatmakers.html" style="color: black;">Dj's & Beatmakers</a></button>
+    <button type="button" class="btn btn-light me-1">Graffiti</button>
+    <p class="mpie mt-3">Artistas Destacado</p>
+    <button type="button" class="btn btn-light mpie me-1">Masta Quba</button>
+    <button type="button" class="btn btn-light me-1">Pat Boy</button>
+    <button type="button" class="btn btn-light me-1">Skafo LaFaro</button>
+    <button type="button" class="btn btn-light me-1">Olmeca</button>
+    <p class="mpie mt-3">Articulos</p>
+    <button type="button" class="btn btn-light mpie me-1">Hodies</button>
+    <button type="button" class="btn btn-light me-1">Playeras</button>
+    <button type="button" class="btn btn-light me-1">Tennis</button>
+    <button type="button" class="btn btn-light me-1">Arte</button>
+    <button type="button" class="btn btn-light me-1">Stickers</button>
+    <p class="newslet fuentenew mt-3">Newsletter</p>
+    <p class="newslet">SUSCRÍBETE A NUESTRO NEWSLETTER Y RECIBE NUESTRAS PROMOCIONES DIRECTAMENTE EN TU CORREO</p>
+    <div class="input-group mt-3 cartas" style="width: 50%;">
+      <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username with two button addons">
+      <button class="btn btn-outline-light" type="button" style="width: 92px;">Hombre</button>
+      <button class="btn btn-outline-light" type="button" style="width: 92px;"> Mujer</button>
+      <button class="btn btn-outline-light" type="button">Suscribete</button>
+    </div>
+    <br>
+    <br>
+    <img src="assets/images/fotter1.jpg" alt="" style="width: 99%;">
+    
+</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="./assets/js/bootstrap.bundle.js"></script>
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/artistasPersonal.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./assets/js/register.js"></script>
+    
+</body>
+
+</html>

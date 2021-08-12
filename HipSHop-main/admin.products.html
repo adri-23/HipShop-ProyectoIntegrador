@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./assets/css/bootstrap.css">
+  <link rel="stylesheet" href="./assets/css/header.style.css">
+  <link rel="stylesheet" href="./assets/css/container.style.css">
+  <link rel="stylesheet" href="./assets/css/admin.style.css">
+  <link rel="stylesheet" href="./assets/css/sidebar.style.css">
+  
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <!-- Navbar brand--><a href="index.html" class="navbar-brand font-weight-bold">
+          <h1 class="title-header">Hip-SHop</h1></a>
+        <!-- Navbar toggler button-->
+        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right">Menu<i class="icon ion-md-list ml-2"></i></button>
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+          <ul class="navbar-nav mx-auto ml-auto">
+                <!-- Link-->
+                <li class="nav-item"> <a href="rap-freestyle.html" class="nav-link">Rap & Freestyle</a></li>
+                <!-- Link-->
+                <li class="nav-item"> <a href="breaking.html" class="nav-link">Breaking</a></li>
+                <!-- Link-->
+                <li class="nav-item"> <a href="djs-beatmakers.html" class="nav-link">DJs & Beatmakers</a></li>
+
+                <li class="nav-item"> <a href="graffiti.html" class="nav-link">Graffiti</a></li>
+                <!-- <li class="nav-item"> <a href="#" class="nav-link">Mujeres</a></li>
+                <li class="nav-item"> <a href="#" class="nav-link">Hombres</a></li> -->
+            
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item" id="loginButton"><a href="#" data-bs-toggle="modal" data-bs-target="#modalForm" class="nav-link font-weight-bold mr-3">Iniciar</a></li>
+            <li class="nav-item" id="signupButton"><a href="#" data-bs-toggle="modal"  data-bs-target="#modalSignup" class="navbar-btn btn btn-primary">Registrarse</a></li>
+            <li class="nav-item" id="nameButton"><a href="perfil.html"  class="nav-link font-weight-bold mr-3" style="font-family: 'SedgwickAveDisplay';font-size: 1.5rem;">Ernesto</a></li>
+            <li class="nav-item" id="cartIcon" ><a href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="50" style="cursor: pointer;margin-left:20px;" height="50" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+              <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+     <!-- Modal container Login-->
+  <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Iniciar sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="aka" placeholder="Correo electronico">
+            <label for="aka">A.K.A.</label>
+          </div>
+          <br>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="password" placeholder="Contraseña">
+            <label for="password">Contraseña</label>
+          </div>
+          <br>
+          <div class="modal-footer d-block">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+            <button type="button" id="login" style="float: right;" class="btn btn-success">Iniciar sesión</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalSignup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Regístrate</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="usernameRegister" placeholder="Correo electronico">
+            <label for="correoElectronico">A.K.A.</label>
+          </div>
+          <br>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="passwordRegister" placeholder="Contraseña">
+            <label for="password">Contraseña</label>
+          </div>
+          <br>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="passwordRegisterConfirm" placeholder="Repite tu contraseña">
+            <label for="password">Repite tu contraseña</label>
+          </div>
+          <br>
+          <div class="modal-footer d-block">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+            <button type="button" style="float: right;" id="registerButton" class="btn btn-success">Registrarse</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal container -->
+  <div class="modal fade" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" >Producto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-floating">
+            <input type="text" class="form-control" placeholder="Nombre del producto" value="Nike 10 Aczino">
+            <label for="floatingPassword">Nombre del producto</label>
+          </div>
+          <br>
+          <ul class="list-size">
+            <li>
+              <div class="form-floating">
+                <span class="remove-table">-</span>
+                <input type="text" class="form-control" placeholder="Nombre del producto">
+                <label for="floatingPassword">Talla</label>
+                
+              
+              </div>
+              <table class="table products">
+                <thead>
+                  <tr>
+                    <th>Color:</th>
+                    <th>Piezas disponibles:</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td> <input type="color" value="#000000"></td>
+                    <td>  <input type="text" value="0"></td>
+                    <td>
+                      <span class="remove-row">-</span> </td>
+                  </tr>
+
+                </tbody>
+              </table>
+              <span class="add-row">+</span>
+            </li>
+          </ul>
+          <span class="add-table">+</span>
+
+          <div>
+            <h5>Imágenes:</h5>
+            <input type="file" id="imagesUpload" multiple>
+          </div>
+          <br>
+          <div class="form-floating">
+            <input type="text" class="form-control" placeholder="Nombre del producto" value="1200">
+            <label for="floatingPassword">Costo</label>
+          </div>
+          
+          <div class="modal-footer d-block">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cerrar</button>
+            <button type="button" style="float: right;" class="btn btn-success">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="newItemForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Agregar nuevo workshop</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="productName" placeholder="Password">
+            <label for="floatingPassword">Nombre del producto</label>
+          </div>
+          <div class="form-floating">
+            <input type="text" class="form-control" id="imagen" placeholder="Password">
+            <label for="floatingPassword">Imagen</label>
+          </div>
+          <div class="form-floating">
+            <input type="text" class="form-control" id="precio" placeholder="Password">
+            <label for="floatingPassword">Precio</label>
+          </div>
+          <div class="form-floating">
+            <input type="text" class="form-control" id="fecha" placeholder="Password">
+            <label for="floatingPassword">Fecha</label>
+          </div>
+          <div class="form-floating">
+            <input type="text" class="form-control" id="location" placeholder="Password">
+            <label for="floatingPassword">Location</label>
+          </div>
+
+          <div class="modal-footer d-block">
+            <button type="button" class="btn btn-danger" id="autofill" >Autollenar</button>
+            <button type="button" style="float: right;" class="btn btn-success" id="saveWorkshop">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container container-fluid-px py-6">
+    <div class="row">
+      <!-- Grid -->
+      <div class="products-grid col-xl-9 col-lg-8 order-lg-2">
+          <section class="items">
+            <div class="row row-items">
+              <div class="col-12">
+                <div>
+                  <h1 style="display:inline-block;margin: 15px 0;font-size: 2rem;color: #484848;">Productos</h1>
+                  <button href="#" data-bs-toggle="modal" data-bs-target="#newItemForm" class="btn btn-primary" style="float: right;margin: 13px 0;">Agregar nuevo producto</button>
+                </div>
+                
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Producto:</th>
+                        <th>Disponibilidad:</th>
+                        <th>Costo:</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <a href="#" data-bs-toggle="modal" data-bs-target="#modalForm"><img class="product-image" src="./assets/img/tenis1.webp"></a>
+                        </td>
+
+                        <td>
+                          <div>
+                            <div>
+                              <span>Talla 25</span>
+                              <ul class="list-colors">
+                                <li class="element-list-colors"><span class="color-list-element" style="background-color: #000;box-shadow: 0px 2px 4px 0px #404040;">10</span></li>
+                                <li class="element-list-colors"><span class="color-list-element" style="background-color: #d70000;box-shadow: 0px 2px 4px 0px #404040;">20</span></li>
+                                <li class="element-list-colors"><span class="color-list-element" style="background-color: #21d7a4;box-shadow: 0px 2px 4px 0px #404040;">10</span></li>
+                                <li class="element-list-colors"><span class="color-list-element" style="background-color: #0800ff;box-shadow: 0px 2px 4px 0px #404040;">30</span></li>
+                                <li class="element-list-colors"><span class="color-list-element" style="background-color: #fb0dcb;box-shadow: 0px 2px 4px 0px #404040;">5</span></li>
+                              </ul>
+                            </div>
+                            <div>
+                              <span>Talla 28</span>
+                              <ul class="list-colors">
+                                <li class="element-list-colors"><span class="color-list-element" style="background-color: #000;box-shadow: 0px 2px 4px 0px #404040;">10</span></li>
+                                <li class="element-list-colors"><span class="color-list-element" style="background-color: #d70000;box-shadow: 0px 2px 4px 0px #404040;">20</span></li>
+                                <li class="element-list-colors"><span class="color-list-element" style="background-color: #21d7a4;box-shadow: 0px 2px 4px 0px #404040;">10</span></li>
+                                <li class="element-list-colors"><span class="color-list-element" style="background-color: #0800ff;box-shadow: 0px 2px 4px 0px #404040;">30</span></li>
+                                <li class="element-list-colors"><span class="color-list-element" style="background-color: #fb0dcb;box-shadow: 0px 2px 4px 0px #404040;">5</span></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                        <td>$1,610.00</td>
+
+                      </tr>
+
+                      
+                    </tbody>
+                  </table>
+              </div>
+            </div>
+          </section>
+      </div>
+      <!-- Sidebar-->
+      <div class="sidebar col-xl-3 col-lg-4 pr-xl-5 order-lg-1">
+        <div class="sidebar-block px-3 px-lg-0">
+          <!-- Brand filter menu - this menu has .show class, so is expanded by default-->
+          <div class="admin-sidebar" style="font-size: 1.5rem;">
+              <ul class="sidebar-list">
+                <li class="sidebar-list-item"><a href="admin.index.html" class="sidebar-list-item-anchor">Dashboard</a></li>
+                <li class="sidebar-list-item"><a href="admin.sales.html" class="sidebar-list-item-anchor">Ventas</a></li>
+                <li class="sidebar-list-item"><a href="admin.orders.html" class="sidebar-list-item-anchor">Pedidos</a></li>
+                <li class="sidebar-list-item"><a href="admin.products.html" class="sidebar-list-item-anchor">Productos</a></li>
+                <li class="sidebar-list-item"><a href="admin.settings.html" class="sidebar-list-item-anchor">Ajustes</a></li>
+              </ul>
+          </div>
+
+        </div>
+        
+      </div>
+      <!-- /Sidebar end-->
+    </div>
+  </div>
+  <!--Footer-->
+  <div class="piedepag">
+    <br>
+    <br>
+    <p class="mpie">Categorias</p>
+    <button type="button" class="btn btn-light mpie me-1">Rap & Freestyle</button>
+    <button type="button" class="btn btn-light me-1">Break Dance</button>
+    <button type="button" class="btn btn-light me-1"><a href="djs-beatmakers.html" style="color: black;">Dj's & Beatmakers</a></button>
+    <button type="button" class="btn btn-light me-1">Graffiti</button>
+    <p class="mpie mt-3">Artistas Destacado</p>
+    <button type="button" class="btn btn-light mpie me-1">Masta Quba</button>
+    <button type="button" class="btn btn-light me-1">Pat Boy</button>
+    <button type="button" class="btn btn-light me-1">Skafo LaFaro</button>
+    <button type="button" class="btn btn-light me-1">Olmeca</button>
+    <p class="mpie mt-3">Articulos</p>
+    <button type="button" class="btn btn-light mpie me-1">Hodies</button>
+    <button type="button" class="btn btn-light me-1">Playeras</button>
+    <button type="button" class="btn btn-light me-1">Tennis</button>
+    <button type="button" class="btn btn-light me-1">Arte</button>
+    <button type="button" class="btn btn-light me-1">Stickers</button>
+    <p class="newslet fuentenew mt-3">Newsletter</p>
+    <p class="newslet">SUSCRÍBETE A NUESTRO NEWSLETTER Y RECIBE NUESTRAS PROMOCIONES DIRECTAMENTE EN TU CORREO</p>
+    <div class="input-group mt-3 cartas" style="width: 50%;">
+      <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username with two button addons">
+      <button class="btn btn-outline-light" type="button" style="width: 92px;">Hombre</button>
+      <button class="btn btn-outline-light" type="button" style="width: 92px;"> Mujer</button>
+      <button class="btn btn-outline-light" type="button">Suscribete</button>
+    </div>
+    <br>
+    <br>
+    <img src="assets/images/fotter1.jpg" alt="" style="width: 99%;">
+    
+</div>
+  <script src="./assets/js/jquery.js"></script>
+  <script src="./assets/js/admin.products.js"></script>
+  <script src="./assets/js/bootstrap.bundle.js"></script>
+  <script src="./assets/js/jquery.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+      $("#autofill").click(function(){
+        $("#productName").val("Workshop de prueba");
+        $("#imagen").val("https://tremending.com/wp-content/uploads/2018/03/rapworkshop2-629x400.jpg");
+        $("#precio").val("1500");
+        $("#fecha").val("23-10-2021");
+        $("#location").val("Este workshop sera llevado a cabo en Eje central #50");
+      });
+      
+      $("#saveWorkshop").click(function(){
+        let request = $.ajax({
+          url: "http://localhost:8080/workshop",
+          method: "POST",
+          contentType: 'application/json',
+          beforeSend: function (xhr) {
+              xhr.setRequestHeader('Authorization', localStorage.getItem("token"));
+          },
+          data: JSON.stringify({
+            "productName" :$("#productName").val(),
+            "image":$("#imagen").val(),
+            "price": $("#precio").val(),
+            "date":  $("#fecha").val(),
+            "location": $("#location").val()
+          })
+        });
+        
+        request.done(function( data ) {
+          swal("Genial", "Ya guardaste un workshop", "success");
+        });
+        request.fail(function( jqXHR, textStatus ) {
+          if(localStorage.getItem("token")){
+            swal("No se ha guardado", "No se ha podido guardar, intenta de nuevo despues", "error");
+          }else{
+            swal("No se ha guardado", "Inicia sesion primero", "error");
+          }
+        });
+      });
+    </script>
+    <script src="./assets/js/register.js"></script>
+</body>
+</html>
